@@ -1,0 +1,14 @@
+.main-container {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #130230;
+  z-index: -2;
+}
+
+.blur-effect {
+  filter: blur(5px);
+}
