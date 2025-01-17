@@ -8,7 +8,7 @@ import "./Agency.css";
 
 function Agencies() {
     return (
-        <div>
+        <div className="agencies-main-container">
             <h1>Agencies</h1>
             <div className="agencies-container">
                 <ISROAgencyCard />

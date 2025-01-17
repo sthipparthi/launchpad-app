@@ -9,11 +9,12 @@ import { Dispatch } from 'redux';
 export const fetchLaunchEvents = () => {
   return async (dispatch: Dispatch) => {
      const response = await axios.get(
-      "https://newsapi.org/v2/everything?q=isro&from=2024-07-12&sortBy=publishedAt&apiKey=8a7631d9bdb14632914e9c01e1c366fc"
+      //"https://newsapi.org/v2/everything?q=isro&from=2024-07-12&sortBy=publishedAt&apiKey=8a7631d9bdb14632914e9c01e1c366fc"
+      "https://api.spaceflightnewsapi.net/v4/articles/?limit=10&offset=0&ordering=-published_at"
     ).then((response) => {
       const data = response.data;
       console.log(data.status);
-      dispatch(launchEventsAction(data.articles));
+      dispatch(launchEventsAction(data.results));
     }).catch((error) => {
       console.log(error);
     });

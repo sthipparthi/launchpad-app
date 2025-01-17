@@ -20,9 +20,9 @@ function LaunchEvents() {
   return (
     <div className="carousel-container">
       <Carousel showArrows={true} autoPlay={true} infiniteLoop={true}>
-        {launchEvents.events.slice(0, 5).map((article, index) => (
+        {launchEvents.events.slice(0, 10).map((article, index) => (
           <div key={index} className="launch-events-container">
-            <h2>{article.title}</h2>
+            <h4 className="event-title">{article.published_at}: {article.title}</h4>
           </div>
         ))}
       </Carousel>

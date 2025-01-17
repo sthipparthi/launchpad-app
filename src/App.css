@@ -1,3 +1,10 @@
+body {
+  background-color: #130230; /* Set the background color for the entire page */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: Arial, sans-serif; /* Optional: Set a default font */
+}
+
 .main-container {
   text-align: center;
 }
@@ -5,8 +12,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  background-color: #130230;
-  z-index: -2;
+  background-color: #f1eff5;
+  z-index: 0;
 }
 
 .blur-effect {

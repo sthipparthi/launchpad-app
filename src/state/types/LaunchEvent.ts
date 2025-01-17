@@ -2,6 +2,7 @@ interface LaunchEvent {
     title: string;
     url: string;
     published_at: string;
+    image_url: string;
 }
 
 interface LaunchEventState {

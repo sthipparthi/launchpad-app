@@ -10,10 +10,17 @@ function ISROModal() {
     const dispatchModal = useDispatch<AppDispatch>();
 
     const handleCloseModal = (): void => {
+        document.body.classList.remove('no-scroll');
         dispatchModal(closeModal());
       };
     
-    if(!isModalOpen) return null;
+    if(isModalOpen) {
+        document.body.classList.add('no-scroll');
+    }
+    if(!isModalOpen) {
+        document.body.classList.remove('no-scroll');
+        return null;
+    }
 
     return (
         <div className="modal-container">

@@ -5,15 +5,16 @@ import launchVideo from "../launchvideo.mp4";
 
 function LaunchHeaders() {
   return (
-
-    <div className="header-container">
+    <header className="header-container">
+      <div className="video-container">
+        <video className="launch-video" autoPlay loop muted playsInline onLoadedMetadata={(e) => {
+          (e.currentTarget as HTMLVideoElement).playbackRate = 0.25;
+        }}>
+          <source src={launchVideo} type="video/mp4" />
+        </video>
+      </div>
       <img src={logo} className="logo" alt="logo" />
-      <video className="launch-video" autoPlay loop muted playsInline onLoadedMetadata={(e) => {
-        (e.currentTarget as HTMLVideoElement).playbackRate = 0.25;
-      }}>
-        <source src={launchVideo} type="video/mp4" />
-      </video>
-    </div>
+    </header>
   );
 }
 
