@@ -1,7 +1,7 @@
 import { AppDispatch } from "../../state/store";
 import "./ISRO.css";
 import { useDispatch } from "react-redux";
-import { openModal } from '../../actions/launch-pad-actions';
+import { openModal, closeModal } from '../../actions/launch-pad-actions';
 
 
 function ISROAgencyCard() {
